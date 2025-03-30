@@ -1,0 +1,505 @@
+@import './reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+    min-height: 100vh;
+    font-family: "Manrope", serif;
+}
+
+.sticky-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+    padding: 0 15px;
+}
+
+.title-1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #000000;
+    line-height: 1;
+}
+
+.title-1 span {
+    color: #81B4BD;
+}
+
+.title-2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.title-3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.none {
+    display: none !important;
+}
+
+/* Header */
+.header {
+    padding: 40px 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 60px;
+}
+
+.nav-list a {
+    color: #000000;
+    transition: color 0.2s ease-in;
+}
+
+.nav-list a.active {
+    color: #81B4BD;
+}
+
+.nav-list a:hover {
+    color: #00CEB5;
+}
+
+.header-bg {
+    background-color: #f6f6f6;
+}
+
+/* Main page */
+
+/* Promo */
+
+.promo {
+    display: flex;
+    align-items: center;
+    padding-left: 70px;
+
+    height: 500px;
+    border-radius: 40px;
+    background-color: #394D42;
+    background-image: url('./../img/promo/promo-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .promo {
+        background-image: url('./../img/promo/promo-bg@2x.jpg');
+    }
+}
+
+.promo-title {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.promo-subtitle {
+    font-size: 24px;
+}
+
+/* Main content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    padding: 90px 0px;
+}
+
+.content-row {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+.content-row.content-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.content-img {
+    flex-shrink: 0;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.content-text p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.content-text a {
+    color: #81B4BD;
+    text-decoration: underline;
+}
+
+
+/* Tours page */
+.inner-page {
+    padding: 90px 0;
+}
+
+.inner-page-title-wrapper {
+    margin-bottom: 60px;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 60px 30px;
+}
+
+.card {
+    width: 370px;
+}
+
+.card-img {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card-desc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.card-desc p {
+    line-height: 1.5;
+}
+
+.card-desc a {
+    color: #81b4bd;
+    text-decoration: underline;
+}
+
+/* About page */
+
+.article-content {
+    width: 970px;
+    margin: 0 auto;
+}
+
+.article-img {
+    margin: 40px 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.article-content p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.article-content p + p {
+    margin-top: 30px;
+}
+
+/* Contacts page */
+
+.contacts-columns {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 100px;
+    
+    align-items: flex-start;
+}
+
+/* Contacts page -- form */
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 30px;
+    width: 600px;
+
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 5px 25px 0px rgba(211, 211, 211, 0.5);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.input {
+    padding: 14px 20px;
+
+    width: 100%;
+    height: 50px;
+
+    border-radius: 2px;
+    border: 1px solid #b5dee5;
+    background-color: #EFF9FB;
+
+    color: #36727D;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.input::placeholder {
+    color: #9ECCD4;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.input.input-50 {
+    flex: 1;
+}
+
+.radio-list, .checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.radio-list label, .checkbox-list label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.radio-list label input, .checkbox-list label input {
+    flex-shrink: 0;
+}
+
+.submit-btn {
+    align-self: flex-start;
+
+    padding: 12px 35px 13px;
+
+    height: 50px;
+
+    border-radius: 6px;
+    background-color: #81B4BD;
+    box-shadow: 0px 8px 20px 0px rgba(129, 180, 189, 0.35);
+
+    font-weight: 800;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+
+    transition: 
+        opacity 0.2s ease-in, 
+        background-color 0.2s ease-in;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}
+
+.submit-btn:active {
+    opacity: 1;
+    background-color: #639199;
+}
+
+/* Custom radio button */
+
+.custom-radio-fake {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 20px;
+    height: 20px;
+
+
+    background-color: #EFF9FB;
+    border-radius: 20px;
+    border: 1px solid #B5DEE5;
+}
+
+.custom-radio-fake::after {
+    content: '';
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: 
+        translate(-50%, -50%) 
+        scale(0);
+
+    width: 12px;
+    height: 12px;
+
+    background: #37B6CC;
+    border-radius: 12px;
+
+    transition: transform 0.2s ease-in;
+}
+
+.custom-radio-real:checked + .custom-radio-fake::after {
+    transform: 
+        translate(-50%, -50%) 
+        scale(1);
+}
+
+/* Custom Checkbox  */
+
+.custom-checkbox-fake {
+    flex-shrink: 0;
+
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid #b5dee5;
+    background: #eff9fb;
+}
+
+.custom-checkbox-fake::after {
+    content: '';
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: 
+        translate(-50%, -50%) 
+        scale(0);
+
+    width: 16px;
+    height: 13px;
+
+    /* background: url('./../img/icons/tick.svg'); */
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.06055 5.93933L7.06055 11.9393M4.93923 11.9393L14.9392 1.93933' stroke='%2337B6CC' stroke-width='3'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: transform 0.2s ease-in;
+}
+
+.custom-checkbox-real:checked + .custom-checkbox-fake::after {
+    transform: 
+        translate(-50%, -50%) 
+        scale(1);
+}
+
+/* Radio and Checkbox hidden */
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+/* Contacts page -- address */
+
+.address-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.address-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.address-list li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    padding: 60px 0px;
+    background-color: #111111;
+    color: #ffffff;
+}
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+.footer-phone {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.footer-email {
+    display: inline-block;
+    margin-bottom: 10px;
+    
+    font-size: 14px;
+    line-height: 1.5;
+    color: #00BDA6;
+}
+
+.footer-address {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.5);
+}
+
